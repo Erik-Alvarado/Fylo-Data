@@ -1,0 +1,199 @@
+main {
+  height: 100%;
+  width: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 25px;
+  @include breakpoint-up(small) {
+    margin: 0 75px;
+  }
+  @include breakpoint-up(medium) {
+    flex-direction: row;
+  }
+  .top,
+  .bottom {
+    width: 100%;
+    background: $darkBlue;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: fadeUp ease 0.3s;
+  }
+  .top {
+    height: 225px;
+    margin-bottom: 20px;
+    border-radius: 10px 100px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    @include breakpoint-up(medium) {
+      margin-right: 25px;
+      width: 65%;
+      height: 210px;
+    }
+    @include breakpoint-up(x-large) {
+      width: 30%;
+    }
+    @media (min-width: 1701px) {
+      width: 22%;
+    }
+    img {
+      width: 140px;
+    }
+    .methods {
+      display: flex;
+      margin-top: 30px;
+
+      .method {
+        height: 50px;
+        width: 50px;
+        margin-right: 15px;
+        border-radius: 10px;
+        background-color: $veryDarkBlue;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: center;
+        transition: ease 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+          background-color: $paleBlue;
+        }
+
+        &[data-tag="file"] {
+          background-image: url("/images/icon-document.svg");
+          background-size: 45%;
+        }
+        &[data-tag="folder"] {
+          background-image: url("/images/icon-folder.svg");
+        }
+        &[data-tag="cloud"] {
+          background-image: url("/images/icon-upload.svg");
+        }
+      }
+    }
+  }
+  .bottom {
+    height: 175px;
+    padding: 40px 30px;
+    @include breakpoint-up(medium) {
+      margin-top: 25px;
+      height: 160px;
+    }
+    @include breakpoint-up(x-large) {
+      width: 50%;
+    }
+    @media (min-width: 1701px) {
+      width: 63%;
+    }
+    p {
+      color: $paleBlue;
+      text-align: center;
+      @include breakpoint-up(medium) {
+        text-align: start;
+      }
+      span {
+        font-weight: 600;
+      }
+    }
+    .lower-half {
+      display: flex;
+      flex-direction: column;
+      .bar {
+        margin-top: 20px;
+        width: 100%;
+        height: 20px;
+        border-radius: 50px;
+        background-color: $veryDarkBlue;
+        padding: 3px;
+        .percentage {
+          width: 75%;
+          height: 100%;
+          background-image: $primGrade;
+          border-radius: 50px;
+          display: flex;
+          padding: 2px;
+          justify-content: flex-end;
+          .marker {
+            background-color: $base;
+            width: 10px;
+            height: 100%;
+            border-radius: 50px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+      .numbers {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+        color: $paleBlue;
+        font-weight: 600;
+      }
+    }
+    .data-left {
+      position: absolute;
+      width: 175px;
+      height: 75px;
+      background-color: $base;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 25px auto;
+      left: 0;
+      right: 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      animation: fadeUp ease 0.3s;
+      animation-delay: 0.4s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+      @include breakpoint-up(medium) {
+        margin: -160px 50px;
+        left: unset;
+        right: 55px;
+        border-radius: 10px 10px 0 10px;
+      }
+      @include breakpoint-up(x-large) {
+        right: 175px;
+      }
+      @media (min-width: 1600px) {
+        right: 190px;
+      }
+      @media (min-width: 1700px) {
+        right: 160px;
+      }
+      @media (min-width: 1800px) {
+        right: 175px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-right: 10px;
+        color: $veryDarkBlue;
+      }
+      span {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: $grayBlue;
+      }
+      &::before {
+        @include breakpoint-up(medium) {
+          content: "";
+          position: absolute;
+          bottom: -24px;
+          width: 0;
+          right: 0;
+          height: 0;
+          border-top: 0 solid transparent;
+          border-right: 25px solid $base;
+          border-bottom: 24px solid transparent;
+        }
+      }
+    }
+  }
+}

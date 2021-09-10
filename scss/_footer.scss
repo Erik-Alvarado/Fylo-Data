@@ -1,0 +1,16 @@
+footer {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  margin: 0 15px;
+}
+.attribute {
+  color: $paleBlue;
+  font-weight: 600;
+  a {
+    text-decoration: none;
+    color: $grayBlue;
+  }
+}

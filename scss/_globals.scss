@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  font-size: 14px;
+  height: 100vh;
+  background-image: url("/images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $veryDarkBlue;
+  @include breakpoint-up(medium) {
+    background-image: url("/images/bg-desktop.png");
+    background-size: 1650px;
+    background-position: bottom;
+  }
+  @include breakpoint-up(x-large) {
+    background-size: 1700px;
+  }
+  @media (min-width: 1701px) {
+    background-size: 100%;
+    background-position: 0px 430px;
+  }
+}
