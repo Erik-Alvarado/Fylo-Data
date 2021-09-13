@@ -171,6 +171,25 @@ main {
   background-color: #dddbff;
 }
 
+.container .top .methods .method.storage[data-tag="file"] {
+  transform: scale(1.1);
+  background-color: #dddbff;
+}
+
+.container .top .methods .method.storage[data-tag="file"] > .percentage {
+  width: 10%;
+}
+
+.container .top .methods .method.storage[data-tag="folder"] {
+  transform: scale(1.1);
+  background-color: #dddbff;
+}
+
+.container .top .methods .method.storage[data-tag="cloud"] {
+  transform: scale(1.1);
+  background-color: #dddbff;
+}
+
 .container .top .methods .method[data-tag="file"] {
   background-image: url("/images/icon-document.svg");
   background-size: 45%;

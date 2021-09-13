@@ -64,7 +64,23 @@ main {
           transform: scale(1.1);
           background-color: $paleBlue;
         }
-
+        &.storage {
+          &[data-tag="file"] {
+            transform: scale(1.1);
+            background-color: $paleBlue;
+            > .percentage {
+              width: 10%;
+            }
+          }
+          &[data-tag="folder"] {
+            transform: scale(1.1);
+            background-color: $paleBlue;
+          }
+          &[data-tag="cloud"] {
+            transform: scale(1.1);
+            background-color: $paleBlue;
+          }
+        }
         &[data-tag="file"] {
           background-image: url("/images/icon-document.svg");
           background-size: 45%;
