@@ -68,9 +68,6 @@ main {
           &[data-tag="file"] {
             transform: scale(1.1);
             background-color: $paleBlue;
-            > .percentage {
-              width: 10%;
-            }
           }
           &[data-tag="folder"] {
             transform: scale(1.1);
